@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ขายอะไรดี จำกัด</title>
 
+    <link rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -13,20 +16,255 @@
 </head>
 <body>
     <header class="header">
-        <div id="name-btn" class="fas fa-bars"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
         <a href="#" class="logo"> <span>ขายอะไรดี</span> จำกัด</a>
 
         <nav class="navbar">
-            <a href="#Home">Home</a>
-            <a href="#Product">Product</a>
-            <a href="#Contact">Contact</a>
-            <a href="#About">About</a>
+            <a href="#home">Home</a>
+            <a href="#vehicles">Vehicles</a>
+            <a href="#contact">Contact</a>
         </nav>
 
-        <div id="Login-btn">
+        <div id="login-btn">
             <button class="btn">Login</button>
             <i class="far fa-user"></i>
         </div>
     </header>
+
+        <div class="login-form-container">
+
+            <span class="fas fa-times" id="close-login-form" ></span>
+
+          <form accept="">
+            <h3>user login</h3>
+            <input type="email" placeholder="email"class="box">
+            <input type="password" placeholder="password"class="box">
+            <p>forget your password<a href="#">click here</a></p>
+            <input type="submit" value="login now" class="btn">
+            <p>or login with</p>
+            <div class="buttons">
+              <a href="#" class="btn">google</a>
+                <a href="#" class="btn">facebook</a>
+            </div>
+            <p>don't have an account <a href="#">create one</a></p>
+          </form>
+        </div>
+
+<section class="home" id="home">
+        <h1 class="home-parallax" data-speed="-2">find your bike</h1>
+        <img class="home-parallax" data-speed="5" src="image/home_img.png" alt="">
+        <a href="#" class="btn home-parallax" data-speed="7">explore cars</a>
+</section>
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-home"></i>
+        <div class="content">
+            <h3>150+</h3>
+            <p>branches</p>
+        </div>
+    </div>
+    <div class="icons">
+        <i class="fas fa-motorcycle"></i>
+        <div class="content">
+            <h3>4770+</h3>
+            <p>bike sold</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <div class="content">
+            <h3>590+</h3>
+            <p>happy clients</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-motorcycle"></i>
+        <div class="content">
+            <h3>870+</h3>
+            <p>new bikes</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="vehicles" id="vehicles">
+    <h1 class="heading">popular<span>vehicles</span></h1>
+
+    <div class="swiper vehicles-slider">
+
+        <div class="swiper-wrapper">
+
+        <div class="swiper-slide box">
+            <img src="image/bike-1.png" alt="">
+            <div class="content">
+                <h3>yamaha r1</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-2.png" alt="">
+            <div class="content">
+                <h3>aprilia rsv4</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-3.png" alt="">
+            <div class="content">
+                <h3>ducati v4</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-4.png" alt="">
+            <div class="content">
+                <h3>kawasaki zx10r</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-5.png" alt="">
+            <div class="content">
+                <h3>yamaha r1m</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-6.png" alt="">
+            <div class="content">
+                <h3>yamaha r1</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide box">
+            <img src="image/bike-7.png" alt="">
+            <div class="content">
+                <h3>yamaha r6</h3>
+                <div class="price"><span>price: </span> $2000/- </div>
+                <p>
+                    new
+                    <span class="fas fa-circle"></span> 2021
+                    <span class="fas fa-circle"></span> 1000cc
+                    <span class="fas fa-circle"></span> 0km
+                </p>
+                <a href="#" class="btn">check out</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>                
+</section> 
+
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>contact</span> us </h1>
+
+<div class="row">
+
+    <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.17926433910068!2d100.65705811375994!3d13.78681605147635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6225a5f52fb3%3A0xb28b8b6c329f5077!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5hOC4l-C4ouC4hOC4p-C4reC4peC4tOC4leC4teC5ieC4muC4uOC5iuC4hOC4quC5jCAoMjAwNikg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1740689034668!5m2!1sth!2sth" allowfullscreen="" loading="lazy"></iframe> </iframe>
+
+
+<form action="">
+    <h3>get in touch</h3>
+    <input type="text" placeholder="name" class="box">
+    <input type="email" placeholder="email" class="box">
+    <input type="number" placeholder="phone" class="box">
+    <textarea placeholder="message" class="box" cols="30" row="10"></textarea>
+    <input type="submit" value="send message" class="btn">
+</form>
+</div>
+</section> 
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>we are a team of bike enthusiasts who love to ride and share our knowledge with others.</p>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
+            <a href="#vehicles"><i class="fas fa-arrow-right"></i> vehicles</a>
+            <a href="#contact"><i class="fas fa-arrow-right"></i> contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+            <a href="#"><i class="fas fa-phone"></i> 095-2532147</a>
+            <a href="#"><i class="fas fa-envelope"> damoy@gmail.com</i>
+        </div>
+    </div>
+    <div class="credit">create by mr. Krittapas | all rights reserved!</div>
+</section>
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
