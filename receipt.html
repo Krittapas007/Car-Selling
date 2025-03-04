@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .receipt-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 100px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #receipt-details {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #receipt-details img {
+            width: 300px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .receipt-info {
+            flex-grow: 1;
+        }
+        .back-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .receipt-heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> <span>ขายอะไรดี</span> จำกัด</a>
+    </header>
+
+    <section class="receipt-container">
+        <h1 class="receipt-heading">ใบเสร็จคำสั่งซื้อ</h1>
+        <div id="receipt-details">
+            <img id="vehicle-image" src="" alt="Vehicle Image">
+            <div class="receipt-info">
+                <h2 id="vehicle-name"></h2>
+                <p><strong>ปีที่ผลิต:</strong> <span id="vehicle-year"></span></p>
+                <p><strong>CC:</strong> <span id="vehicle-cc"></span></p>
+                <p><strong>ราคาทั้งหมด:</strong> <span id="vehicle-price"></span></p>
+                <p><strong>หมายเลขคำสั่งซื้อ:</strong> <span id="order-id"></span></p>
+            </div>
+        </div>
+        <div class="back-container">
+            <a href="index.html" class="btn">กลับสู่หน้าหลัก</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("vehicle-name").textContent = params.get('name') || "ไม่ระบุ";
+            document.getElementById("vehicle-year").textContent = params.get('year') || "ไม่ระบุ";
+            document.getElementById("vehicle-cc").textContent = params.get('cc') || "ไม่ระบุ";
+            document.getElementById("vehicle-price").textContent = params.get('price') || "ไม่ระบุ";
+            document.getElementById("vehicle-image").src = params.get('image') || "image/not-found.png";
+            document.getElementById("vehicle-image").alt = params.get('name') || "ไม่มีข้อมูลรถ";
+            document.getElementById("order-id").textContent = Math.floor(Math.random() * 100000);
+        });
+    </script>
+</body>
+</html>

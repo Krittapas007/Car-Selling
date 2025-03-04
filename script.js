@@ -6,13 +6,23 @@ menu.onclick = () =>{
     navbar.classList.toggle('active');
 }
 
-document.querySelector('#login-btn').onclick = () =>{
+
+document.querySelector('#login-btn').onclick = () => {
     document.querySelector('.login-form-container').classList.toggle('active');
 }
 
-document.querySelector('#close-login-form').onclick = () =>{
+document.querySelector('#close-login-form').onclick = () => {
     document.querySelector('.login-form-container').classList.remove('active');
 }
+
+document.querySelector('#create-account-link').onclick = () => {
+    document.querySelector('.signup-form-container').classList.toggle('active');
+}
+
+document.querySelector('#close-signup-form').onclick = () => {
+    document.querySelector('.signup-form-container').classList.remove('active');
+}
+
 
 window.onscroll = () =>{
 
@@ -71,3 +81,30 @@ var swiper = new Swiper(".vehicles-slider", {
             },
         },
     });
+
+    document.querySelectorAll('.checkout-btn').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const name = this.getAttribute('data-name');
+            const price = this.getAttribute('data-price');
+            const year = this.getAttribute('data-year');
+            const cc = this.getAttribute('data-cc');
+            const image = this.parentElement.parentElement.querySelector('img').src; // ดึง URL ของรูปภาพรถ
+            window.location.href = `checkout.html?name=${name}&price=${price}&year=${year}&cc=${cc}&image=${encodeURIComponent(image)}`;
+        });
+    });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const price = params.get('price');
+    
+        // ถ้าอยู่ใน checkout.html ให้ตั้งค่าปุ่มชำระเงินให้ไปยัง payment.html
+        if (document.getElementById("pay-btn")) {
+            document.getElementById("pay-btn").addEventListener("click", function(event) {
+                event.preventDefault();
+                window.location.href = `payment.html?name=${name}&price=${price}`;
+            });
+        }
+    });
+    

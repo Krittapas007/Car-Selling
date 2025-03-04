@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .payment-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 100px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .payment-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pay-button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .pay-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo"> <span>ขายอะไรดี</span> จำกัด</a>
+    </header>
+
+    <div class="payment-container">
+        <h2>กรอกข้อมูลบัตรเครดิต/เดบิต</h2>
+        <form id="payment-form">
+            <label>หมายเลขบัตร:</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+            <label>วันหมดอายุ:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+            <label>CVV:</label>
+            <input type="text" id="cvv" placeholder="123" required>
+
+            <label>ชื่อเจ้าของบัตร:</label>
+            <input type="text" id="cardholder-name" placeholder="ชื่อ-นามสกุล" required>
+
+            <button type="submit" class="pay-button">ดำเนินการชำระเงิน</button>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById("payment-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const params = new URLSearchParams(window.location.search);
+        alert("ชำระเงินสำเร็จ! ขอบคุณที่ใช้บริการ");
+        window.location.href = `receipt.html?name=${params.get('name')}&year=${params.get('year')}&cc=${params.get('cc')}&price=${params.get('price')}&image=${params.get('image')}`;
+    });
+
+</script>
+
+</body>
+</html>
